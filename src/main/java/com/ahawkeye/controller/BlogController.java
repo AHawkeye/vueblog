@@ -33,6 +33,7 @@ public class BlogController {
     @Autowired
     BlogService blogService;
     // 分页
+
     @GetMapping("/blogs")
     public Result list(@RequestParam(defaultValue = "1") Integer currentPage) {
         Page page = new Page(currentPage, 5);
